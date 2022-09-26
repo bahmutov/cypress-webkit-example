@@ -1,4 +1,4 @@
-# cypress-webkit-example
+# cypress-webkit-example ![cypress version](https://img.shields.io/badge/cypress-10.8.0-brightgreen)
 
 > Run Cypress tests using WebKit browser
 
