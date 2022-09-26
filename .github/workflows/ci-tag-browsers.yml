@@ -1,4 +1,4 @@
-name: ci all browsers
+name: ci tag browsers
 on: [push]
 jobs:
   tests-all-chrome:
