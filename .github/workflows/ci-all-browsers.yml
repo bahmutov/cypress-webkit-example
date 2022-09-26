@@ -34,6 +34,8 @@ jobs:
           # start the application before running Cypress
           start: npm run start-quiet
           browser: firefox
+          # cy.dblclick did not work in headless FF mode
+          headed: true
 
   tests-webkit:
     runs-on: ubuntu-20.04

@@ -22,7 +22,13 @@ describe('TodoMVC', function () {
     beforeEach(addDefaultTodos)
 
     it('should hide other controls when editing', function () {
-      allItems().eq(1).as('secondTodo').find('label').dblclick()
+      allItems()
+        .should('be.visible')
+        .eq(1)
+        .as('secondTodo')
+        .find('label')
+        .should('be.visible')
+        .dblclick()
 
       cy.get('@secondTodo').find('.toggle').should('not.be.visible')
       cy.get('@secondTodo').find('label').should('not.be.visible')
