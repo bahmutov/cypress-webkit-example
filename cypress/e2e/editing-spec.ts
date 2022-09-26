@@ -8,7 +8,14 @@ import {
 
 describe('TodoMVC', function () {
   beforeEach(function () {
-    cy.visit('/')
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        win.localStorage.removeItem('react-todos')
+      },
+    })
+    // the application starts with clean slate
+    cy.get('.new-todo').should('be.visible')
+    cy.get('.todo-list').should('not.exist')
   })
 
   context('Editing', { tags: '@editing' }, function () {

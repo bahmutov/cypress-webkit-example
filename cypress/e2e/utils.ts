@@ -11,7 +11,7 @@ export const TODO_ITEM_THREE = 'book a doctors appointment'
  */
 export const addDefaultTodos = () => {
   addTodos(TODO_ITEM_ONE, TODO_ITEM_TWO, TODO_ITEM_THREE)
-  allItems().as('todos')
+  allItems().as('todos').should('have.length', 3)
 }
 
 /**
