@@ -19,3 +19,4 @@ jobs:
           # pass the grep tag to run only some tests
           # https://github.com/cypress-io/cypress-grep
           env: grepTags=@sanity
+          browser: webkit
