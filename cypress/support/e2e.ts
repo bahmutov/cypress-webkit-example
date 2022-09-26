@@ -17,9 +17,6 @@
 // @ts-ignore
 require('cypress-grep')()
 
-// @ts-ignore
-require('cypress-watch-and-reload/support')
-
 // define a simple custom command to add a todo via UI
 // @ts-ignore
 Cypress.Commands.add('addTodo', (text: string) => {

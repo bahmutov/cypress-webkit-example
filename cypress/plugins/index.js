@@ -12,9 +12,6 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 
-  // https://github.com/bahmutov/cypress-watch-and-reload
-  require('cypress-watch-and-reload/plugins')(on, config)
-
   // https://github.com/cypress-io/cypress-grep
   require('cypress-grep/src/plugin')(on, config)
 
