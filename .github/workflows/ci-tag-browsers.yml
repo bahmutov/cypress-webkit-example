@@ -63,4 +63,4 @@ jobs:
           # start the application before running Cypress
           start: npm run start-quiet
           browser: webkit
-          env: grepTags='@sanity @webkit'
+          env: 'grepTags=@sanity @webkit'
