@@ -12,8 +12,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          # check the spec types
-          build: npm run lint
+          # install WebKit browser dependencies and check the spec types
+          build: npx playwright install-deps webkit && npm run lint
           # start the application before running Cypress
           start: npm start
           # pass the grep tag to run only some tests
