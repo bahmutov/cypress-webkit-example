@@ -9,13 +9,20 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       # https://github.com/cypress-io/github-action
+      - name: Install dependencies
+        uses: cypress-io/github-action@v4
+        with:
+          # install WebKit browser dependencies
+          build: npx playwright install-deps webkit
+          runTests: false
+
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          # install WebKit browser dependencies and check the spec types
-          build: |
-            npx playwright install-deps webkit
-            npm run lint
+          # we have already installed everything
+          install: false
+          # check the spec types
+          build: npm run lint
           # start the application before running Cypress
           start: npm start
           # pass the grep tag to run only some tests
