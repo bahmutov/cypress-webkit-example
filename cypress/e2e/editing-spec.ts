@@ -21,18 +21,22 @@ describe('TodoMVC', function () {
   context('Editing', { tags: '@editing' }, function () {
     beforeEach(addDefaultTodos)
 
-    it('should hide other controls when editing', function () {
-      allItems()
-        .should('be.visible')
-        .eq(1)
-        .as('secondTodo')
-        .find('label')
-        .should('be.visible')
-        .dblclick()
+    it(
+      'should hide other controls when editing',
+      { tags: '@webkit' },
+      function () {
+        allItems()
+          .should('be.visible')
+          .eq(1)
+          .as('secondTodo')
+          .find('label')
+          .should('be.visible')
+          .dblclick()
 
-      cy.get('@secondTodo').find('.toggle').should('not.be.visible')
-      cy.get('@secondTodo').find('label').should('not.be.visible')
-    })
+        cy.get('@secondTodo').find('.toggle').should('not.be.visible')
+        cy.get('@secondTodo').find('label').should('not.be.visible')
+      },
+    )
 
     it('should save edits on blur', { tags: '@sanity' }, function () {
       allItems().eq(1).as('secondTodo').find('label').dblclick()
