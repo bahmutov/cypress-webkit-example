@@ -2,6 +2,8 @@
 
 > Run Cypress tests using WebKit browser
 
+Read the blog post [Run Cypress Tests Using WebKit Browser](https://glebbahmutov.com/blog/cypress-webkit/)
+
 ![Pick WebKit browser](./images/webkit.png)
 
 - Cypress announcement [Cypress 10.8: Experimental: Run tests in WebKit](https://www.cypress.io/blog/2022/09/13/cypress-10-8-experimental-run-tests-in-webkit/)
